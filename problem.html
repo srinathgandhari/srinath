@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let num = parseInt(prompt("Enter a num"))
+            if(num % 2 == 0 && num % 3 ==0){
+                alert("num is divisible by 2 and 3 is divisible")
+            }else if(num % 2 == 0){
+                alert("num is divisible by2")
+            }else if(num % 3 == 0){
+              alert("num is divisible by 3")
+            }else{
+              alert("num is not divisible by 2 or 3") 
+            }
+
+  //write a program to find the largest number out of the three numbers expected from the user
+            let a= parseInt(prompt("enter the first num"))
+            let b= parseInt(prompt("enter the second num"))
+            let c= parseInt(prompt("enter the third num"))
+            let largest;
+       if (a >= b && a >= c) {
+        largest = a;
+    } else if (b >= a && b >= c) {
+        largest = b;
+    } else {
+        largest = c;
+    }
+
+    alert(`largest number is: ${largest}`)
+
+    const wd = parseInt(prompt("Total no.of working days"))
+    const ab = parseInt(prompt("Toatal no.of days for absent"))
+
+    const dp = wd - ab;
+    const attendancePercentage = (dp / wd) * 100;
+    if (attendancePercentage >= 75) {
+       alert("The student is eligible to write the exam.");
+    } else {
+        alert("The student is not eligible to write the exam.");
+    }
+    
+      
+            
+    </script>
+</body>
+</html>
