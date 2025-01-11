@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let input = prompt("Enter a number:");
+        let num = Number(input); 
+        if (isNaN(num)) {
+            alert("Invalid input. Please enter a valid number.");
+            console.log("Invalid input. Please enter a valid number.");
+        } else if (num > 0) {
+            alert("The number is positive.");
+            console.log("The number is positive.");
+        } else if (num === 0) {
+            alert("The number is zero.");
+            console.log("The number is zero.");
+        } else if (num < 0) {
+            alert("The number is negative.");
+            console.log("The number is negative.");
+        }
+         
+        
+        let day = prompt("Enter a day:").trim().toLowerCase();
+
+switch (day) {
+    case 'monday':
+    case 'tuesday':
+    case 'wednesday':
+    case 'thursday':
+        console.log("It's a weekday.");
+        alert("It's a weekday."); 
+        break;
+    case 'friday':
+    case 'saturday':
+    case 'sunday':
+        console.log("It's a weekend.");
+        alert("It's a weekend."); 
+        break;
+    default:
+        console.log("Invalid day entered.");
+        alert("Invalid day entered."); 
+}     
+
+
+let a = parseInt(prompt("Enter the number of units: "), 10);
+
+        if (a > 0) {
+            let totalBill = 0;
+
+            if (a <= 50) {
+                totalBill = a * 2;
+            } else if (a <= 150) {
+                totalBill = (50 * 2) + ((a - 50) * 3);
+            } else if (a <= 250) {
+                totalBill = (50 * 2) + (100 * 3) + ((a - 150) * 5);
+            } else {
+                totalBill = (50 * 2) + (100 * 3) + (100 * 5) + ((a - 250) * 8);
+            }
+            totalBill += totalBill * 0.2;
+
+            document.write("Total Bill: " + totalBill);
+        } else {
+            alert("Invalid input");
+        }
+
+
+        let c=parseInt(prompt("Enter the number of students:"))
+        let b= c*(c-1)/2
+        document.write("Total number of handshakes are: "+b)
+
+    </script>
+</body>
+</html>
