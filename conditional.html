@@ -7,42 +7,33 @@
 </head>
 <body>
     <script>
-    let a=5;
-    let b=10;
-    if(a<b){
-        document.write("hi", "<br>")
-    }else{
-        document.write("hello", '<br>')
-    }
-    document.write("welcome")
+        let age = prompt("Enter the age");
+let citizen = prompt("Enter the citizenship");
+let cTest = prompt("Citizenship result");
 
-    age=prompt("enter your age")
-    age=prompt("enter your name")
-    if(age<18){
-        alert(name+'you are too young to marry')
-    }else if(age>35){
-        alert(name+ "you are to old to marry")
-    }else{
-        alert(name+"perfect age to marry")
-    }
-    alert("welcome to wedding")
+if((age >= 18) && (citizen=="Indian"||cTest =="Passed")){
+    document.write("Can eligible for voting");
+}
+else{
+    document.write("Cannot vote");
+}
 
-    let c = parseInt(prompt("Team A: Enter your score:"));
-        let d = parseInt(prompt("Team B: Enter your score:"));
-        if(c > 300 || d > 300){
-            if(c + d < 500){
-                alert("You can team up");
-            }else{
-                alert("You can't team up");
-            }
-        }
-        else{
-            alert("You can't team up");
-        }
+let amountSpent = prompt("enter the amount spent:");
+let isPremiumMember = prompt("are you a premium member?");
+amountSpent = parseFloat(amountSpent);
+let discount = 0;
+if (amountSpent > 100) {
+    discount = 20;
+} else if (amountSpent > 50 && amountSpent <= 100) {
+    discount = 10;
+}
+if (isPremiumMember.toLowerCase() === "yes") {
+    discount += 5;
+}
+let finalAmount = amountSpent - (amountSpent * discount / 100);
+document.write("Total discount: " + discount + "%<br>");
+document.write("Final amount after discount: Rs." + finalAmount.toFixed(2));
 
-
-
-</script>
+    </script>
 </body>
 </html>
-
